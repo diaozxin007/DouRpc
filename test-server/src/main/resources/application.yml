@@ -1,0 +1,3 @@
+logging:
+  level:
+    io.netty: DEBUG
