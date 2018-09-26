@@ -27,21 +27,13 @@ import java.util.Set;
  */
 @Configuration
 @Slf4j
-@ComponentScan(includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION,value = RpcInterface.class))
-public class RpcConfig implements ApplicationContextAware,InitializingBean, InstantiationAwareBeanPostProcessor {
+public class RpcConfig implements ApplicationContextAware,InitializingBean {
 
 	private ApplicationContext applicationContext;
 
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		this.applicationContext = applicationContext;
-	}
-
-	@Override
-	public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
-
-		log.info("info get beanClass {} and name {}",beanClass,beanName);
-		return null;
 	}
 
 	@Override
