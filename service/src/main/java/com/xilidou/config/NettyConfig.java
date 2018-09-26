@@ -1,8 +1,8 @@
 package com.xilidou.config;
 
 
-import com.xilidou.coder.ChannelRepository;
-import com.xilidou.coder.handler.ServerInitializer;
+import com.xilidou.netty.ChannelRepository;
+import com.xilidou.netty.handler.ServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;

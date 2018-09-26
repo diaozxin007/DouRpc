@@ -2,7 +2,7 @@ package com.xilidou;
 
 import com.xilidou.entity.RpcRequest;
 import com.xilidou.entity.RpcResponse;
-import com.xilidou.coder.NettyClient;
+import com.xilidou.netty.NettyClient;
 
 import java.net.InetSocketAddress;
 

@@ -1,10 +1,7 @@
-package com.xilidou.coder.handler;
+package com.xilidou.netty.handler;
 
-<<<<<<< HEAD:client/src/main/java/com/xilidou/coder/handler/ClientHandler.java
-=======
 import com.xilidou.DefaultFuture;
 import com.xilidou.entity.RpcRequest;
->>>>>>> 0b54287355c29b96cd1f3fcbd49726c972b74f37:client/src/main/java/com/xilidou/netty/handler/ClientHandler.java
 import com.xilidou.entity.RpcResponse;
 import io.netty.channel.*;
 
