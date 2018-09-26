@@ -1,9 +1,7 @@
-package com.xilidou.netty;
+package com.xilidou.coder;
 
-import com.xilidou.netty.handler.ServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 

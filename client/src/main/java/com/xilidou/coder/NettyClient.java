@@ -1,8 +1,8 @@
-package com.xilidou.netty;
+package com.xilidou.coder;
 
 import com.xilidou.client.Client;
 import com.xilidou.entity.RpcRequest; import com.xilidou.entity.RpcResponse;
-import com.xilidou.netty.handler.ClientHandler;
+import com.xilidou.coder.handler.ClientHandler;
 import com.xilidou.serialization.JsonSerialization;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;

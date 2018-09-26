@@ -1,15 +1,13 @@
-package com.xilidou.netty.handler;
+package com.xilidou.coder.handler;
 
 import com.xilidou.entity.RpcRequest;
 import com.xilidou.entity.RpcResponse;
-import com.xilidou.netty.RpcDecoder;
-import com.xilidou.netty.RpcEncoder;
+import com.xilidou.coder.RpcDecoder;
+import com.xilidou.coder.RpcEncoder;
 import com.xilidou.serialization.JsonSerialization;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.handler.codec.DelimiterBasedFrameDecoder;
-import io.netty.handler.codec.Delimiters;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

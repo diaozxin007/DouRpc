@@ -1,4 +1,4 @@
-package com.xilidou.netty;
+package com.xilidou.coder;
 
 import com.xilidou.api.Serialization;
 import io.netty.buffer.ByteBuf;

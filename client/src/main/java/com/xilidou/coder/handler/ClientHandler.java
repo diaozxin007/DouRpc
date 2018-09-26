@@ -1,14 +1,10 @@
-package com.xilidou.netty.handler;
+package com.xilidou.coder.handler;
 
-import com.xilidou.entity.RpcRequest;
 import com.xilidou.entity.RpcResponse;
 import io.netty.channel.*;
 
 import java.util.Map;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * @author Zhengxin

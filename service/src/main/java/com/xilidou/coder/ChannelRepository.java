@@ -1,4 +1,4 @@
-package com.xilidou.netty;
+package com.xilidou.coder;
 
 import io.netty.channel.Channel;
 
