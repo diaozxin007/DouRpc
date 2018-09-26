@@ -69,7 +69,6 @@ public class NettyClient implements Client {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override

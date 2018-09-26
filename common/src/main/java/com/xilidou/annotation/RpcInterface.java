@@ -8,8 +8,12 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface RpcService {
+public @interface RpcInterface {
 
-    String name();
+    String host() default "127.0.0.1";
+
+    int port() default 8080;
+
+    String name() default "";
 
 }
