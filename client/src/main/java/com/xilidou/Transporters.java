@@ -9,7 +9,7 @@ import java.net.InetSocketAddress;
 
 public class Transporters {
 
-    public static RpcResponse send(RpcRequest request) throws InterruptedException {
+    public static RpcResponse send(RpcRequest request){
 
         NettyClient nettyClient = new NettyClient("127.0.0.1", 8080);
 
