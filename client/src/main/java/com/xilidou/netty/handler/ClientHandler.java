@@ -18,12 +18,10 @@ public class ClientHandler extends ChannelDuplexHandler {
 
     @Override
     public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
-
         if(msg instanceof RpcRequest){
             RpcRequest request = (RpcRequest) msg;
             futureMap.putIfAbsent(request.getRequestId(),new DefaultFuture());
         }
-
         super.write(ctx, msg, promise);
     }
 

@@ -12,7 +12,7 @@ public class Transporters {
 
         NettyClient nettyClient = new NettyClient("127.0.0.1", 8080);
 
-        nettyClient.connect(new InetSocketAddress("127.0.0.1",8080));
+        nettyClient.connect(nettyClient.getInetSocketAddress());
 
         RpcResponse send = nettyClient.send(request);
 

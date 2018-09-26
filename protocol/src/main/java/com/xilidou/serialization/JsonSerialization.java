@@ -6,6 +6,9 @@ import com.xilidou.api.Serialization;
 
 import java.io.IOException;
 
+/**
+ * @author Zhengxin
+ */
 public class JsonSerialization implements Serialization {
 
     private ObjectMapper objectMapper;

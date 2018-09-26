@@ -25,43 +25,33 @@ public class ServerHandler extends SimpleChannelInboundHandler<RpcRequest> imple
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, RpcRequest msg) throws Exception {
-
         RpcResponse rpcResponse = new RpcResponse();
-
         rpcResponse.setRequestId(msg.getRequestId());
-
         try{
-
             Object handler = handler(msg);
             rpcResponse.setResult(handler);
         }catch (Throwable throwable){
             rpcResponse.setThrowable(throwable);
             throwable.printStackTrace();
         }
-
         ctx.writeAndFlush(rpcResponse);
-
     }
 
     private Object handler(RpcRequest request) throws Throwable {
-
-        String className = request.getClassName();
 
         Class<?> clz = Class.forName(request.getClassName());
 
         Object serviceBean = applicationContext.getBean(clz);
 
-        String serviceBeanName = serviceBean.getClass().getName();
-
         Class<?> serviceClass = serviceBean.getClass();
         String methodName = request.getMethodName();
 
-        Class<?>[] paramerterTypes = request.getParameterTypes();
+        Class<?>[] parameterTypes = request.getParameterTypes();
 
         Object[] parameters = request.getParameters();
 
         FastClass fastClass = FastClass.create(serviceClass);
-        FastMethod fastMethod = fastClass.getMethod(methodName,paramerterTypes);
+        FastMethod fastMethod = fastClass.getMethod(methodName,parameterTypes);
 
         return fastMethod.invoke(serviceBean,parameters);
     }

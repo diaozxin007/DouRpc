@@ -38,17 +38,12 @@ public class RpcConfig implements ApplicationContextAware,InitializingBean {
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-
 		Reflections reflections = new Reflections("com.xilidou");
-
 		DefaultListableBeanFactory beanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
-
 		Set<Class<?>> typesAnnotatedWith = reflections.getTypesAnnotatedWith(RpcInterface.class);
-
 		for (Class<?> aClass : typesAnnotatedWith) {
 			beanFactory.registerSingleton(aClass.getSimpleName(),ProxyFactory.create(aClass));
 		}
-
 		log.info("afterPropertiesSet is {}",typesAnnotatedWith);
 	}
 }
